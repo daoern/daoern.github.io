@@ -75,6 +75,7 @@ p{
 }
 
 .profile-card .profile-name {
+    text-transform: uppercase;
     position: absolute;
     left: 30px;
     bottom: 70px;
