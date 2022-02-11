@@ -387,3 +387,10 @@ span.anchor2{
   top: -96px; 
   visibility: hidden;
 }
+
+/* body image  */
+body-img{
+  background-image: url('/img/body-400.png');
+  width: 400px;
+  height: 400px;
+}
