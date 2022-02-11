@@ -149,7 +149,8 @@
       </div>
     </div>
 
-    <section class="container" id="about-me">
+    <section class="container" name="about-me">
+      <span class="anchor" id="about-me"></span>
       <div class="row header-row mb-5">
         <div class="col align-self-center">
           <div class="section-header">
@@ -178,7 +179,8 @@
 
     <div class="container">
       <div class="row">
-        <section class="col-12 col-lg-6 section py-5" id="edu">
+        <section class="col-12 col-lg-6 section py-5" name="edu">
+          <span class="anchor2" id="edu"></span>
           <p class="overline mb-5">Education</p>
           <div class="showcase-item">
             <img class="icon" src="/img/utar.jfif" alt="" />
@@ -191,7 +193,8 @@
             </p>
           </div>
         </section>
-        <section class="col-12 col-lg-6 section py-5" id="cert">
+        <section class="col-12 col-lg-6 section py-5" name="cert">
+          <span class="anchor2" id="cert"></span>
           <p class="overline mb-5">Certificates</p>
           <div class="showcase-item">
             <img class="icon" src="/img/huawei.jfif" alt="" />
@@ -207,7 +210,8 @@
       </div>
     </div>
 
-    <section class="container section py-5" id="exp">
+    <section class="container section py-5" name="exp">
+      <span class="anchor" id="exp"></span>
       <p class="overline mb-5">Experience</p>
       <div class="row">
         <div class="col-lg-4 col-md-6">
@@ -324,19 +328,23 @@
       const sections = document.querySelectorAll("section");
       const navLi = document.querySelectorAll("nav .container div ul li a");
       window.onscroll = () => {
-        var current = "";
+        var currentSectionName = [];
 
-        sections.forEach((section) => {
+        var windowOffset = Math.ceil(window.innerHeight / 2);
+
+        sections.forEach((section, i) => {
           const sectionTop = section.offsetTop;
-          const sectionLeft = section.offsetLeft;
-          if (pageYOffset >= sectionTop - sectionLeft - 30) {
-            current = section.getAttribute("id");
+          const nextSectionTop = (i + 1 < sections.length) ? sections[i + 1].offsetTop : window.innerHeight;
+          var sectionBottom = section.offsetTop + section.offsetHeight;
+          sectionBottom = (nextSectionTop > sectionBottom) ? nextSectionTop : sectionBottom;
+          if (pageYOffset >= sectionTop - windowOffset && pageYOffset <= sectionBottom - windowOffset) {
+            currentSectionName.push(section.getAttribute("name"));
           }
         });
 
         navLi.forEach((li) => {
           li.classList.remove("active");
-          if (li.href.substring(li.href.indexOf("#") + 1) == current) {
+          if (currentSectionName.includes(li.href.substring(li.href.indexOf("#") + 1))) {
             li.classList.add("active");
           }
         });

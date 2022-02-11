@@ -371,3 +371,19 @@ footer p {
   top: 21px;
   left: 8px;
 }
+
+/* utility */
+
+span.anchor{
+  display: block;
+  position: relative;
+  top: -56px; 
+  visibility: hidden;
+}
+
+span.anchor2{
+  display: block;
+  position: relative;
+  top: -96px; 
+  visibility: hidden;
+}
