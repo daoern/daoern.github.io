@@ -1,0 +1,58 @@
+@import "variables";
+
+* {
+  font-family: $body-font;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold;
+  color: $primary-color;
+}
+
+p {
+  color: $body-text-color;
+}
+
+.overline {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: $font-semi-bold;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.showcase .date {
+  font-size: 14px;
+  font-weight: 300;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+}
+
+.showcase p {
+  margin-bottom: 0px;
+}
+
+.showcase .heading {
+  margin-bottom: 6px;
+}
+
+.showcase .subheading {
+  font-weight: $font-semi-bold;
+  margin-bottom: 10px;
+}
+
+section {
+  margin: 6rem 0;
+}
+
+span.anchor {
+  display: block;
+  position: relative;
+  top: -7rem;
+  visibility: hidden;
+}

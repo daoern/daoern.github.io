@@ -1,0 +1,133 @@
+@import "variables";
+
+$item-radius: 12px;
+$timeline-width: 2px;
+$timeline-color: rgba(0, 0, 0, 0.05);
+$dot-color: $primary-color;
+$dot-size: 16px;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 0;
+}
+.timeline {
+  height: auto;
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.timeline:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: $timeline-width;
+  height: 100%;
+  background-color: $timeline-color;
+}
+.timeline ul {
+  list-style: none;
+}
+.timeline ul li {
+  padding: 8px;
+  border-radius: $item-radius;
+  margin-bottom: 20px;
+  margin-left: 20px;
+}
+.timeline ul li:last-child {
+  margin-bottom: 0;
+}
+.timeline-item h1 {
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 30px;
+  margin-bottom: 10px;
+}
+.timeline-item p {
+  margin-bottom: 0px;
+}
+.timeline-item .heading {
+  margin-bottom: 6px;
+}
+.timeline-item .subheading {
+  font-weight: $font-semi-bold;
+  margin-bottom: 10px;
+}
+/* .timeline-item p {
+  font-size: 16px;
+  line-height: 30px;
+  font-weight: 300;
+} */
+.timeline-item .date {
+  font-size: 14px;
+  font-weight: 300;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+}
+.timeline ul li::before {
+  content: "";
+  position: absolute;
+  height: $dot-size;
+  width: $dot-size;
+  border-radius: 50%;
+  background-color: $dot-color;
+  transition: background-color 0.3s ease;
+  margin-top: 38px;
+  margin-left: -35px;
+}
+.timeline ul li:hover::before {
+  transition: background-color 0.3s ease;
+  background-color: aqua;
+}
+@media only screen and (min-width: 668px) {
+  .timeline:before {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .timeline ul li::before {
+    top: 0px;
+    margin-top: 0px;
+    margin-left: 0px;
+  }
+  .timeline ul li {
+    width: 50%;
+    position: relative;
+    margin-bottom: 50px;
+    margin-left: 0px;
+  }
+  .timeline ul li:nth-child(odd) {
+    float: left;
+    clear: right;
+    transform: translateX(-30px);
+    border-radius: $item-radius 0px $item-radius $item-radius;
+  }
+  .timeline ul li:nth-child(even) {
+    float: right;
+    clear: left;
+    transform: translateX(30px);
+    border-radius: 0px $item-radius $item-radius $item-radius;
+  }
+  .timeline ul li:nth-child(odd)::before {
+    transform: translate(50%, -50%);
+    right: -30px;
+  }
+  .timeline ul li:nth-child(even)::before {
+    transform: translate(-50%, -50%);
+    left: -30px;
+  }
+  .timeline-item .date {
+    position: absolute;
+    top: -40px;
+  }
+  .timeline-item .heading {
+    margin-top: -20px;
+  }
+}

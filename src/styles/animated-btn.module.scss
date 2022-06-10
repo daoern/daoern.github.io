@@ -1,0 +1,19 @@
+@import "variables";
+
+.btn {
+  padding-left: 0;
+  padding-right: 0;
+  font-weight: $font-semi-bold;
+  color: $primary-color;
+}
+
+.btn .icon {
+  position: relative;
+  transition: transform 0.3s ease;
+  transform: translateX(0px);
+  margin-left: 8px;
+}
+
+.btn:hover .icon {
+  transform: translateX(10px);
+}

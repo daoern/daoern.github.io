@@ -1,0 +1,9 @@
+education:
+  programme: Bachelor of Computer Science (Honours)
+  institution: Universiti Tunku Abdul Rahman - Faculty of Information and Communication Technology (FICT)
+  description:
+    I pursued my bachelor's degree in Computer Science at UTAR. During my study, I built solid understanding
+    in the fundamentals as well as excelled in advanced topics. I was awarded President’s List and Dean’s List several times.
+  startDate: 2019-10-01 00:00:00 +0000
+  endDate: 2022-10-01 00:00:00 +0000
+  graphics: "../images/utar-fict.jpg"
