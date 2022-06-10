@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react"
 import About from "../components/About"
 import Certificates from "../components/Certificates"
 import Education from "../components/Education"
-import Footer from "../components/Footer"
 import Jumbotron from "../components/Jumbotron"
 import Layout from "../components/layout"
 import Section from "../components/Section"
@@ -91,7 +90,6 @@ export default function Home() {
           <Certificates />
         </Section>
       </div>
-      <Footer />
     </Layout>
   )
 }
