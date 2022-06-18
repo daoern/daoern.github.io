@@ -1,6 +1,11 @@
 import { Link } from "gatsby"
 import React, { useState } from "react"
-import { navbar, hamburgerIcon, hover } from "../styles/navbar.module.scss"
+import {
+  navbar,
+  hamburgerIcon,
+  hover,
+  open,
+} from "../styles/navbar.module.scss"
 
 export default function Navbar({ isHover = false, items = [], activeItem }) {
   const [state, setState] = useState({
@@ -38,7 +43,7 @@ export default function Navbar({ isHover = false, items = [], activeItem }) {
           id="nav-menu"
           onClick={() => setState({ expand: !state.expand })}
         >
-          <div className={hamburgerIcon}>
+          <div className={hamburgerIcon + " " + (state.expand ? open : "")}>
             <span></span>
             <span></span>
             <span></span>
