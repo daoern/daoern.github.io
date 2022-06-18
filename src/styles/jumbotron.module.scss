@@ -11,6 +11,10 @@
   background-color: #f0f8ff;
 }
 
+.jumbotron .main-btn {
+  transition: 0.4s;
+}
+
 @media (max-width: 576px) {
   .jumbotron {
     padding-left: 32px;

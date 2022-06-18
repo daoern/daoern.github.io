@@ -1,7 +1,8 @@
 import React from "react"
-import { jumbotron } from "../styles/jumbotron.module.scss"
+import { jumbotron, mainBtn } from "../styles/jumbotron.module.scss"
 import { StaticImage } from "gatsby-plugin-image"
 import SocialLinks from "./SocialLinks"
+import { Link } from "gatsby"
 
 export default function Jumbotron() {
   return (
@@ -11,9 +12,9 @@ export default function Jumbotron() {
           <p className="overline">Hey There! My name is</p>
           <h1 className="">Dao Ern Lim</h1>
           <p>I’m a computer science undergraduate from Malaysia.</p>
-          <a href="#about-me" className="btn btn-lg btn-primary">
+          <Link to="#about" className={mainBtn + " btn btn-lg btn-primary"}>
             Explore More
-          </a>
+          </Link>
           <div className="mt-3">
             <SocialLinks />
           </div>
