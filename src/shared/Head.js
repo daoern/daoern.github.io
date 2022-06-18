@@ -5,7 +5,8 @@ export default function Head() {
   return (
     <Helmet>
       <meta charSet="utf-8" />
-      <title>My Title</title>
+      <title>Dao Ern Lim | Personal Website</title>
+      <meta name="author" content="Dao Ern Lim" />
     </Helmet>
   )
 }
