@@ -2,7 +2,8 @@
   org: Huawei
   cred: 010102001808462451409 (Lim Dao Ern)
   icon: ../images/huawei.png
-  link: https://e.huawei.com/en/talent/#/cert/certificate-verification
+  # link: https://e.huawei.com/en/talent/#/cert/certificate-verification
+  link: 010102001808462451409.pdf
 - title: Algorithmic Toolbox
   org: Coursera - University of California San Diego
   cred:
