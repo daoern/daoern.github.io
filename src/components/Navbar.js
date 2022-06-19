@@ -1,10 +1,11 @@
+import { Icon } from "@iconify/react"
 import { Link } from "gatsby"
+import { StaticImage } from "gatsby-plugin-image"
 import React, { useState } from "react"
 import {
   navbar,
   hamburgerIcon,
   hover,
-  open,
   navItem,
 } from "../styles/navbar.module.scss"
 
@@ -23,13 +24,16 @@ export default function Navbar({ isHover = false, items = [], activeItem }) {
     >
       <div className="container">
         <div className="navbar-brand">
-          {/* <img
-            src="/img/daoern-logo-32.png"
-            width="32"
-            height="32"
-            class="d-inline-block align-top mr-2"
-            alt=""
-          /> */}
+          <StaticImage
+            className="d-inline-block align-top mr-2"
+            src="../images/daoern-logo.png"
+            alt="Dao Ern logo"
+            placeholder="tracedSVG"
+            layout="fixed"
+            width={24}
+            height={24}
+            style={{ transform: "translateY(12.5%)" }}
+          />
           daoern
         </div>
 
@@ -44,11 +48,11 @@ export default function Navbar({ isHover = false, items = [], activeItem }) {
           id="nav-menu"
           onClick={() => setState({ expand: !state.expand })}
         >
-          <div className={hamburgerIcon + " " + (state.expand ? open : "")}>
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
+          <Icon
+            icon={state.expand ? "uil:times" : "uil:bars"}
+            width={32}
+            height={32}
+          />
         </button>
         <div
           className={"collapse navbar-collapse " + (state.expand ? "show" : "")}
