@@ -34,7 +34,7 @@ export default function Home() {
           i + 1 < sections.length
             ? sections[i + 1].anchorRef.current.offsetTop
             : document.documentElement.scrollHeight
-        console.log(offsetTop + " " + nextOffsetTop + " " + window.scrollY)
+        //console.log(offsetTop + " " + nextOffsetTop + " " + window.scrollY)
         if (
           window.scrollY >= offsetTop - windowOffset &&
           window.scrollY <= nextOffsetTop - windowOffset
@@ -43,7 +43,7 @@ export default function Home() {
         }
       })
       if (activeSection !== state.activeSection) {
-        console.log(activeSection)
+        //console.log(activeSection)
         setState({
           activeSection: activeSection,
         })
