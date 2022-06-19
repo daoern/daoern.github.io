@@ -5,6 +5,7 @@ import {
   hamburgerIcon,
   hover,
   open,
+  navItem,
 } from "../styles/navbar.module.scss"
 
 export default function Navbar({ isHover = false, items = [], activeItem }) {
@@ -58,7 +59,7 @@ export default function Navbar({ isHover = false, items = [], activeItem }) {
               <li key={item.to}>
                 <Link
                   className={
-                    "nav-item nav-link " +
+                    `nav-item nav-link ${navItem} ` +
                     (activeItem === item.name ? "active" : "")
                   }
                   to={item.to}

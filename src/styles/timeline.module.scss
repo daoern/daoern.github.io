@@ -16,7 +16,6 @@ $dot-size: 16px;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 40px 0;
 }
 .timeline {
   height: auto;
@@ -79,15 +78,18 @@ $dot-size: 16px;
   width: $dot-size;
   border-radius: 50%;
   background-color: $dot-color;
-  transition: background-color 0.3s ease;
+  transition: box-shadow $anim;
   margin-top: 38px;
   margin-left: -35px;
 }
 .timeline ul li:hover::before {
-  transition: background-color 0.3s ease;
-  background-color: aqua;
+  transition: box-shadow $anim;
+  box-shadow: #e7f0f6 0px 0px 0px 8px;
 }
 @media only screen and (min-width: 668px) {
+  .container {
+    padding: 40px 0;
+  }
   .timeline:before {
     left: 50%;
     transform: translateX(-50%);

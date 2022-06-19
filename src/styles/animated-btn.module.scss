@@ -7,6 +7,10 @@
   color: $primary-color;
 }
 
+.btn:hover {
+  color: $primary-color-light;
+}
+
 .btn .icon {
   position: relative;
   transition: transform 0.3s ease;

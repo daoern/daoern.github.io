@@ -1,3 +1,5 @@
+@import "variables";
+
 nav {
   font-weight: 700;
 }
@@ -11,7 +13,11 @@ nav {
 }
 
 .navbar {
-  transition: background-color 200ms linear;
+  transition: background-color $anim, box-shadow $anim;
+}
+
+.navbar .nav-item {
+  transition: color $anim;
 }
 
 .hamburger-icon {

@@ -1,21 +1,30 @@
 /*========== Colors ==========*/
 
-$primary-color: #05364d;
-$body-text-color: #5b6d75;
+$primary-color: #00658e; //#1976d2;
+$primary-color-light: rgba($primary-color, 0.72);
+$body-text-color: #5b6d75; //#e7f0f6
+
+$theme-colors: (
+  "primary": $primary-color,
+);
 
 /*========== Font and typography ==========*/
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 $body-font: "Poppins", sans-serif;
 
 /* .5rem = 8px, 1rem = 16px, 1.5rem = 24px ... */
-$big-font-size: 2rem;
-$h1-font-size: 1.5rem;
-$h2-font-size: 1.25rem;
-$h3-font-size: 1.125rem;
-$normal-font-size: 0.938rem;
-$small-font-size: 0.813rem;
-$smaller-font-size: 0.75rem;
+// $big-font-size: 2rem;
+// $h1-font-size: 1.5rem;
+// $h2-font-size: 1.25rem;
+// $h3-font-size: 1.125rem;
+// $normal-font-size: 0.938rem;
+// $small-font-size: 0.813rem;
+// $smaller-font-size: 0.75rem;
 
 /*========== Font weight ==========*/
 $font-medium: 500;
 $font-semi-bold: 600;
+
+$anim-time: 240ms;
+$anim-timing: ease;
+$anim: $anim-time $anim-timing;

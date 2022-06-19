@@ -27,11 +27,11 @@ export default function About() {
   return (
     <div className="row header-row">
       <div className="col align-self-center">
-        <div className="mb-4">
+        <div className="sec-title text-center text-sm-left mb-4">
           <Icon icon="uil:user-square" height={32} width={32} />
           <p className="overline mt-1">About Me</p>
-          <h2 className="title">{aboutData.headline}</h2>
         </div>
+        <h2 className="title">{aboutData.headline}</h2>
         <p>{aboutData.body}</p>
       </div>
       <div className="col-md-auto d-flex justify-content-center">
