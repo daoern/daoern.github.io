@@ -30,6 +30,7 @@
   },
   "devDependencies": {
     "@iconify/react": "^3.2.2",
+    "gh-pages": "^4.0.0",
     "prettier": "^2.6.2"
   },
   "repository": {
